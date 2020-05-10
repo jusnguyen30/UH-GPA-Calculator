@@ -1,83 +1,115 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>UH GPA Calculator</title>
-  <center><h1 class="heading">UH GPA Calculator</h1>
-  <h3 class="heading">Enter your course information from this semester: </h3></center>
-  <img src="paw.png" width="350" height="300">
-<script src="test.js">
-</script>
-<link rel="stylesheet" href="style.css">
-</head>
+  <head>
+    <title>UH GPA Calculator</title>
+    <script src="calculate.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+  </head>
 
-<body>
-  <!--<center><textarea id="myTextArea" rows="2" cols="7"></textarea></center>
-  <center><textarea id="myTextArea" rows="2" cols="7"></textarea></center>-->
-  <center><table id="myTable">
-    <tr>
-      <th></th>
-      <th>Credits</th>
-      <th>Grade</th>
-    </tr>
-    
-    <tr>
-      <td>Class 1</td>
-      <td><textarea id="myTextArea1" rows="1" cols="7"></textarea></td>
-      <td><textarea id="myTextArea2" rows="1" cols="7"></textarea></td>
-    </tr>
-    
-    <tr>
-      <td>Class 2</td>
-      <td><textarea id="myTextArea3" rows="1" cols="7"></textarea></td>
-      <td><textarea id="myTextArea4" rows="1" cols="7"></textarea></td>
-    </tr>
-    
-    <tr>
-      <td>Class 3</td>
-      <td><textarea id="myTextArea5" rows="1" cols="7"></textarea></td>
-      <td><textarea id="myTextArea6" rows="1" cols="7"></textarea></td>
-    </tr>
-    
-    <tr>
-      <td>Class 4</td>
-      <td><textarea id="myTextArea7" rows="1" cols="7"></textarea></td>
-      <td><textarea id="myTextArea8" rows="1" cols="7"></textarea></td>
-    </tr>
-    
-     <tr>
-      <td>Class 5</td>
-      <td><textarea id="myTextArea9" rows="1" cols="7"></textarea></td>
-      <td><textarea id="myTextArea10" rows="1" cols="7"></textarea></td>
-    </tr>
-    
-     <tr>
-      <td>Class 6</td>
-      <td><textarea id="myTextArea11" rows="1" cols="7"></textarea></td>
-      <td><textarea id="myTextArea12" rows="1" cols="7"></textarea></td>
-    </tr>
-    
-     <tr>
-      <td>Class 7</td>
-      <td><textarea id="myTextArea13" rows="1" cols="7"></textarea></td>
-      <td><textarea id="myTextArea14" rows="1" cols="7"></textarea></td>
-    </tr>
-    
-    <tr>
-      <th></th>
-      <th>Previous Credits</th>
-      <th>Previous GPA</th>
-    </tr>
-    
-    <tr>
-      <td></td>
-      <td><textarea id="myTextArea15" rows="1" cols="7"></textarea></td>
-      <td><textarea id="myTextArea16" rows="1" cols="7"></textarea></td>
-    </tr>
-    
-    </table></center>
-  
-  <center><button type="button" onclick="myFunction()">Calculate GPA</button></center>
-  <center><p id="demo"></p></center>
-  <!--<center><p id="demo2"></p></center>-->
-</body>
+  <body>
+    <nav class="navbar fixed-top navbar-light" style="background-color: rgb(200, 16, 46);">
+      <h1 id="title">UH GPA Calculator</h1>
+    </nav>
+
+    <section id="mainPage">
+    <div id="body">
+      <center>
+
+        <h2 class="label">Current semester information:</h2>
+
+        <table id="myTable" class="table-striped table-light">
+          <thead>
+            <tr>
+              <th>Class&nbsp;&nbsp;</th>
+              <th>Credit hrs&nbsp;&nbsp;</th>
+              <th>Grade</th>
+            </tr>
+          </thead>
+
+          <tbody>
+          <tr>
+            <td>1</td>
+            <td><textarea id="myTextArea1" rows="1" cols="7"></textarea></td>
+            <td><textarea id="myTextArea2" rows="1" cols="7"></textarea></td>
+          </tr>
+
+          <tr>
+            <td>2</td>
+            <td><textarea id="myTextArea3" rows="1" cols="7"></textarea></td>
+            <td><textarea id="myTextArea4" rows="1" cols="7"></textarea></td>
+          </tr>
+
+          <tr>
+            <td>3</td>
+            <td><textarea id="myTextArea5" rows="1" cols="7"></textarea></td>
+            <td><textarea id="myTextArea6" rows="1" cols="7"></textarea></td>
+          </tr>
+
+          <tr>
+            <td>4</td>
+            <td><textarea id="myTextArea7" rows="1" cols="7"></textarea></td>
+            <td><textarea id="myTextArea8" rows="1" cols="7"></textarea></td>
+          </tr>
+
+          <tr>
+            <td>5</td>
+            <td><textarea id="myTextArea9" rows="1" cols="7"></textarea></td>
+            <td><textarea id="myTextArea10" rows="1" cols="7"></textarea></td>
+          </tr>
+
+          <tr>
+            <td>6</td>
+            <td><textarea id="myTextArea11" rows="1" cols="7"></textarea></td>
+            <td><textarea id="myTextArea12" rows="1" cols="7"></textarea></td>
+          </tr>
+
+          <tr>
+            <td>7</td>
+            <td><textarea id="myTextArea13" rows="1" cols="7"></textarea></td>
+            <td><textarea id="myTextArea14" rows="1" cols="7"></textarea></td>
+          </tr>
+          </tbody>
+        </table>
+
+        <br/>
+
+        <h2 class="label">Past cumulative information:</h2>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Credit hrs&nbsp;&nbsp;</th>
+              <th>GPA</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td><textarea id="myTextArea15" rows="1" cols="7"></textarea></td>
+              <td><textarea id="myTextArea16" rows="1" cols="7"></textarea></td>
+            </tr>
+          </tbody>
+        </table>
+      </center>
+
+      <br/>
+
+      <center>
+        <button type="button" class="btn btn-dark" onclick="myFunction()">Calculate GPA</button>
+      </center>
+      <center><p id="demo"></p></center>
+      </div>
+      </section>
+
+      <section id="copyrightPage">
+        <center><h3 id="copyright">Copyright © 2020 Justin Nguyen, All Rights Reserved.</h3></center>
+      </section>
+  </body>
 </html>
